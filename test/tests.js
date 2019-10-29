@@ -1,2 +1,2 @@
 import './html-equal.js';
-// add your test files:
+import './html-equal.test.js';

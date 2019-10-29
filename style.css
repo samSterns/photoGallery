@@ -6,6 +6,11 @@ font-family: 'Raleway', sans-serif; */
     box-sizing: border-box;
 }
 
+#logo {
+    width: 25px;
+    height: 25px;
+}
+
 section {
     margin: 20px auto;
     width: 90%;
@@ -21,9 +26,19 @@ section {
     max-width: 20%;
     max-height: 30%;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
 }
 
 img {
     max-width: 200px;
     max-height: 500px;
 }
+
+/* .cat-type-filter {
+    height: 48px;
+    width: 150px;
+    font-size: 1.2em;
+} */
