@@ -2,16 +2,42 @@ import images from '../data/images.js';
 import htmlToDOM from '../util/html-to-DOM.js';
 import renderHornyAnimal from './render-horny-animal.js';
 
-const list = document.querySelector('.images');
+const list = document.querySelector('.horny-animal');
+const imageTypeFilter = document.querySelector('.filter-choices');
 
-// loop the cat data
-images.forEach(images => {
-    // call template function to get html
-    const html = renderHornyAnimal(images);
+function render(imagesToRender) {
+    while (list.lastElementChild){
+        list.lastElementChild.remove();
+    }
+    imagesToRender.forEach(image => {
+        const html = renderHornyAnimal(image);
+        const dom = htmlToDOM(html);
+        list.appendChild(dom);
+    });
+}
 
-    // make DOM from html
+images.forEach(image => {
+
+    const html = renderHornyAnimal(image);
+
     const dom = htmlToDOM(html);
 
-    // append to the list
     list.appendChild(dom);
 });
+
+imageTypeFilter.addEventListener('change', () => {
+
+    const filterString = imageTypeFilter.value;
+    let filteredImages = null;
+
+    if (!filterString) {
+        filteredImages = images;
+    } else {
+        filteredImages = images.filter(image => {
+            return image.keyword === filterString; 
+        });
+    }
+    render(filteredImages);
+});
+
+render(images);
