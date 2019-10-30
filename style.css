@@ -1,9 +1,16 @@
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Liu Jian Mao Cao', cursive;
-font-family: 'Raleway', sans-serif; */
+font-family: 'Raleway', sans-serif; 
+442B48 dark purple
+4B7F52 dark green
+98B06F muted
+B6DC76 
+C64191 pink 
+ */
 * {
     box-sizing: border-box;
+    background-color: #98B06F;
 }
 
 #logo {
@@ -19,7 +26,7 @@ section {
 }
 
 .horny-animal {
-    border: solid 5px black;
+    border: solid 5px #C64191;
     list-style: none;
     justify-content: space-around;
     border-radius: 10%;
@@ -36,9 +43,3 @@ img {
     max-width: 200px;
     max-height: 500px;
 }
-
-/* .cat-type-filter {
-    height: 48px;
-    width: 150px;
-    font-size: 1.2em;
-} */
