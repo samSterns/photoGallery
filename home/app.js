@@ -28,18 +28,15 @@ images.forEach(image => {
 imageTypeFilter.addEventListener('change', () => {
 
     const filterString = imageTypeFilter.value;
-    console.log(filterString);
     let filteredImages = null;
 
     if (!filterString) {
         filteredImages = images;
     } else {
         filteredImages = images.filter(image => {
-            console.log(image);
             return image.keyword === filterString; 
         });
     }
-    console.log(filteredImages);
     render(filteredImages);
 });
 
